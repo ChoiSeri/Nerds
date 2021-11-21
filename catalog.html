@@ -50,7 +50,7 @@
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
                 <fieldset class="filter-item">
-                    <legend class="filter-title">Стоимость:</legend>
+                    <legend class="filter-title price-title">Стоимость:</legend>
                     <div class="range-filter">
                         <div class="range-controls">
                             <div class="scale">
@@ -76,50 +76,55 @@
                 <fieldset class="filter-item">
                     <legend class="filter-title">Сетка:</legend>
                     <ul class="filter-list clear-list">
-                        <li>
-                            <label class="filter-text">
-                                <input type="radio" name="grid" value="adaptive" checked>Адаптивная
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-adaptive" type="radio" name="grid"
+                                   value="adaptive" checked>
+                            <label class="filter-text" for="filter-adaptive">Адаптивная</label>
                         </li>
-                        <li>
-                            <label class="filter-text">
-                                <input type="radio" name="grid" value="fixed">Фиксированная
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-fixed" type="radio" name="grid"
+                                   value="fixed">
+                            <label class="filter-text" for="filter-fixed">Фиксированная</label>
                         </li>
-                        <li>
-                            <label class="filter-text">
-                                <input type="radio" name="grid" value="rubber">Резиновая
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-rubber" type="radio" name="grid"
+                                   value="rubber">
+                            <label class="filter-text" for="filter-rubber">Резиновая</label>
                         </li>
                     </ul>
                 </fieldset>
                 <fieldset class="filter-item">
                     <legend class="filter-title">Особенности:</legend>
                     <ul class="filter-list clear-list">
-                        <li>
-                            <label class="filter-text">
-                                <input type="checkbox" name="features" value="slider" checked>Слайдер
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-slider" type="checkbox"
+                                   name="features"
+                                   value="slider" checked>
+                            <label class="filter-text" for="filter-slider">Слайдер</label>
                         </li>
-                        <li>
-                            <label class="filter-text">
-                                <input type="checkbox" name="features" value="advantages">Блок преимуществ
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-advantages" type="checkbox"
+                                   name="features"
+                                   value="advantages">
+                            <label class="filter-text" for="filter-advantages">Блок преимуществ</label>
                         </li>
-                        <li>
-                            <label class="filter-text">
-                                <input type="checkbox" name="features" value="news" checked>Новости
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-news" type="checkbox" name="features"
+                                   value="news"
+                                   checked>
+                            <label class="filter-text" for="filter-news">Новости</label>
                         </li>
-                        <li>
-                            <label class="filter-text">
-                                <input type="checkbox" name="features" value="gallery">Галерея
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-gallery" type="checkbox"
+                                   name="features"
+                                   value="gallery">
+                            <label class="filter-text" for="filter-gallery">Галерея</label>
                         </li>
-                        <li>
-                            <label class="filter-text">
-                                <input type="checkbox" name="features" value="basket">Корзина
-                            </label>
+                        <li class="filter-option">
+                            <input class="filter-input visually-hidden" id="filter-basket" type="checkbox"
+                                   name="features"
+                                   value="basket">
+                            <label class="filter-text" for="filter-basket">Корзина</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -141,13 +146,15 @@
                     <a class="assortment-text" href="#">По названию</a>
                 </li>
                 <li class="assortment-item">
-                    <a href="#">
-                        <img src="img/arrow.svg" width="11" height="10" alt="Стрелка вниз">
+                    <a class="arrow arrow-down arrow-current" href="#">
+                        <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 10 0 0h11" fill="#231F20"/></svg>
                     </a>
                 </li>
                 <li class="assortment-item">
-                    <a href="#">
-                        <img class="arrow-up" src="img/arrow.svg" width="11" height="10" alt="Стрелка вверх">
+                    <a class="arrow arrow-up" href="#">
+                        <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 10 0 0h11" fill="#231F20"/></svg>
                     </a>
                 </li>
             </ul>
@@ -266,6 +273,31 @@
             </div>
         </div>
     </section>
+
+    <section class="modal-window">
+        <div class="modal-container">
+            <h2 class="modal-title">Напишите нам</h2>
+            <form class="modal-form" method="post" action="https://echo.htmlacademy.ru">
+                <p class="modal-item">
+                    <label for="name">Ваше имя:</label>
+                    <input id="name" type="text" name="forename" placeholder="Имя Фамилия">
+                </p>
+                <p class="modal-item">
+                    <label for="mail">Ваш email:</label>
+                    <input id="mail" type="email" name="email" placeholder="email@example.com">
+                </p>
+                <p class="modal-item">
+                    <label for="letter">Текст письма:</label>
+                    <textarea id="letter" name="message" rows="5" placeholder="В свободной форме"></textarea>
+                </p>
+                <button class="button modal-button" type="submit">Отправить</button>
+            </form>
+            <div class="close-button">
+                <span class="visually-hidden">Закрыть</span>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer class="base-footer">
@@ -276,16 +308,31 @@
                 <li class="social-item">
                     <a class="social-button" href="#">
                         <span class="visually-hidden">Vkontakte</span>
+                        <svg class="vkontakte-image" width="27" height="15" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.1 11.5c1-.3 2.2 2 3.5 3 1 .6 1.7.5 1.7.5h3.5s1.8-.2 1-1.6c0-.1-.5-1-2.6-3-2.2-2-1.9-1.8.7-5.3 1.6-2.1 2.3-3.5 2-4-.1-.6-1.3-.4-1.3-.4h-4c-.3 0-.6.1-.8.5 0 0-.6 1.7-1.4 3.1-1.7 3-2.4 3.2-2.7 3-.7-.5-.5-1.8-.5-2.7 0-2.9.4-4.1-.9-4.4-.4-.1-.7-.2-1.8-.2-1.4 0-2.6 0-3.2.3-.5.3-.8.7-.6.8.2 0 .8.1 1.1.6.4.5.4 1.7.4 1.7s.3 3.5-.5 3.9c-.5.3-1.3-.3-2.8-3-.8-1.4-1.4-3-1.4-3L5.2 1 4.6.7H.8S.3.7.1.9c-.2.3 0 .7 0 .7S3 8.5 6.3 12c3 3.1 6.4 3 6.4 3h1.6s.4-.1.7-.4c.2-.2.2-.7.2-.7s0-2 1-2.4Z"
+                                  fill="#fff"/>
+                        </svg>
                     </a>
                 </li>
                 <li class="social-item">
                     <a class="social-button" href="#">
                         <span class="visually-hidden">Facebook</span>
+                        <svg class="facebook-image" width="12" height="22" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4Z" fill="#fff"/>
+                        </svg>
                     </a>
                 </li>
                 <li class="social-item">
                     <a class="social-button" href="#">
                         <span class="visually-hidden">Instagram</span>
+                        <svg class="instagram-image" width="21" height="21" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3 0h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3Zm11 10.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0ZM3 18V9h1.18a6.5 6.5 0 1 0 12.64 0H18v9H3ZM14 7h4V3h-4v4Z"
+                                  fill="#fff"/>
+                        </svg>
                     </a>
                 </li>
             </ul>
