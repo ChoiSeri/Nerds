@@ -145,16 +145,20 @@
                 <li class="assortment-item">
                     <a class="assortment-text" href="#">По названию</a>
                 </li>
+            </ul>
+            <ul class="arrows clear-list">
                 <li class="assortment-item">
                     <a class="arrow arrow-down arrow-current" href="#">
                         <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.5 10 0 0h11" fill="#231F20"/></svg>
+                            <path d="M5.5 10 0 0h11" fill="#231F20"/>
+                        </svg>
                     </a>
                 </li>
                 <li class="assortment-item">
                     <a class="arrow arrow-up" href="#">
                         <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.5 10 0 0h11" fill="#231F20"/></svg>
+                            <path d="M5.5 10 0 0h11" fill="#231F20"/>
+                        </svg>
                     </a>
                 </li>
             </ul>
@@ -274,30 +278,6 @@
         </div>
     </section>
 
-    <section class="modal-window">
-        <div class="modal-container">
-            <h2 class="modal-title">Напишите нам</h2>
-            <form class="modal-form" method="post" action="https://echo.htmlacademy.ru">
-                <p class="modal-item">
-                    <label for="name">Ваше имя:</label>
-                    <input id="name" type="text" name="forename" placeholder="Имя Фамилия">
-                </p>
-                <p class="modal-item">
-                    <label for="mail">Ваш email:</label>
-                    <input id="mail" type="email" name="email" placeholder="email@example.com">
-                </p>
-                <p class="modal-item">
-                    <label for="letter">Текст письма:</label>
-                    <textarea id="letter" name="message" rows="5" placeholder="В свободной форме"></textarea>
-                </p>
-                <button class="button modal-button" type="submit">Отправить</button>
-            </form>
-            <div class="close-button">
-                <span class="visually-hidden">Закрыть</span>
-            </div>
-        </div>
-    </section>
-
 </main>
 
 <footer class="base-footer">
@@ -343,6 +323,30 @@
         </section>
     </div>
 </footer>
+
+<section class="modal-window">
+    <div class="modal-container">
+        <h2 class="modal-title">Напишите нам</h2>
+        <form class="modal-form" method="post" action="https://echo.htmlacademy.ru">
+            <p class="modal-item">
+                <label for="name">Ваше имя:</label>
+                <input id="name" type="text" name="forename" placeholder="Имя Фамилия">
+            </p>
+            <p class="modal-item">
+                <label for="mail">Ваш email:</label>
+                <input id="mail" type="email" name="email" placeholder="email@example.com">
+            </p>
+            <p class="modal-item">
+                <label for="letter">Текст письма:</label>
+                <textarea id="letter" name="message" rows="5" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button modal-button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+    </div>
+</section>
 
 </body>
 </html>
